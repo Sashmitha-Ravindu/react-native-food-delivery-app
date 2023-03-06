@@ -3,17 +3,18 @@ import { withExpoSnack } from 'nativewind';
 
 import { Text, View } from 'react-native';
 import { styled } from 'nativewind';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-const StyledView = styled(View)
-const StyledText = styled(Text)
+const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
-    <StyledView className="flex-1 items-center justify-center">
-      <StyledText className="text-slate-800">
-        Try editing me! 🎉
-      </StyledText>
-    </StyledView>
+    <NavigationContainer>
+      <Stack.Navigator>
+      </Stack.Navigator>
+    
+    </NavigationContainer>
   );
 }
 
